@@ -1,0 +1,43 @@
+﻿<div>
+    <div class="container">
+        <div class="row" id="DynamicLoadImage">
+            <div class="span3 galery" ng-repeat="product in store.products | orderBy:[OrderName] | filter:search">
+                <div class="image-galery">
+                    <div id="{{product.uniCode}}" class="group FindMyKey" rel="group1" href="#">
+                        <img ng-src="{{product.imageUrl}}" />
+                        <div class="forwardImg">
+                            <a href="{{product.imageUrl | split:'_m.jpg': 0}}_b.jpg" rel="noopener noreferrer" target="_blank"><i class="fa fa-search-plus zoomImg"></i></a>
+
+
+                            <a id="{{product.uniCode}}" class="a" href="#/Gallery/{{product.uniCode}}"><i class="fa fa-info-circle zoomImg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="count-galery">
+                    <ul>
+                        <li><i class="icon-comment"></i> 5 </li>
+                        <li><i class="icon-star"></i> 2</li>
+                        <li><i class="icon-eye-open"></i> 20</li>
+                    </ul>
+                    <ul class="ulRightBox">
+                        <li>
+                            <a href="mailto:?subject =Look+at+this+Image&body={{product.imageUrl | split:'_m.jpg': 0}}_b.jpg">
+
+                                <i class=" fa fa-share-alt shareIcon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{product.imageUrl | split:'_m.jpg': 0}}_b_d.jpg">
+                                <i class="icon-download-alt cursorPointer"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tags-galery"><p>Author : {{product.author | split:'"': 1}}<a href=""> </a></p></div>
+
+            </div>
+            <div data-ng-show='loading'>Loading</div>
+        </div>
+    </div>
+
+</div>

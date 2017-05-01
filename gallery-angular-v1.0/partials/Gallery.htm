@@ -1,0 +1,84 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="span9">
+            <div class="row">
+                <div class="span9 image-detail">
+                    <div class="auto image-single">
+
+                        <img ng-src="{{product.imageUrl | split:'_m.jpg': 0}}_z.jpg" class="centered" />
+                    </div>
+                </div>
+                <div class="span9 image-comments">
+                    <div class="comment">
+                        <h3>Comments On This Image</h3>
+
+                    </div>
+
+                    <br class="clearfix" />
+                    <h3>Post Comment </h3>
+                    <div class="post-comment">
+                        <form class="form-horizontal">
+                            <textarea rows="5" class="input-xxlarge inp-btm" name="comments" value=""  style="resize: none;" placeholder="Enter your comment here.."></textarea><br />
+                            <input type="email" name="email" class="input-xxlarge inp-btm" value="" placeholder="Enter your email address" required="" /><br />
+                            <input type="text" name="name" class="input-xxlarge inp-btm" value="" placeholder="Enter your name" required="" /><br />
+                            <input type="text" name="site" class="input-xxlarge inp-btm" value="" placeholder="Enter your site" required="" /><br />
+                            <input type="submit" name="submit" value="Submit" class="btn btn-primary" /> <input type="reset" name="reset" value="Reset" class="btn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="span3">
+            <div class="row">
+                <div class="span3 sidebar-detail-menu">
+                    <ul>
+                        <li><a href="#" rel="tooltip" title="Share">Share</a></li>
+                        <li><a href="#" rel="tooltip" title="Add Comment">Comment</a></li>
+                        <li><a href="#" rel="tooltip" title="Download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="span3 sidebar-detail-similiar">
+                    <div class="similiar-image">
+                        <h4>Similar Image</h4>
+                        <a href="#"><img src="{{product.imageUrl| split:'_m.jpg': 0 }}_s.jpg" class="img-thumbs" /></a>
+                    </div>
+                </div>
+
+
+               
+                <div class="span3 sidebar-detail-category">
+                    <div class="category-image">
+                        <div class="cat-tags">
+                            Tags :
+                            {{product.tags}}
+                        </div>
+                        <div class="cat-category">
+                            Author:
+                            <a>{{product.author | split:'"': 1}}</a>
+
+                        </div>
+
+                        <div class="cat-downloaded">
+                            Date Taken:
+                            <a>{{product.dateTaken | split:'T': 0}}</a>
+                          
+                        </div>
+
+                        <div class="cat-liked">
+                            Date Published:
+                            <a>{{product.datePublished| split:'T': 0}}</a>
+                        
+                        </div>
+                        <div class="cat-shared">
+                            Title:
+                            <a>{{product.title}}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

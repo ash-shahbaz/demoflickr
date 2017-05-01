@@ -1,0 +1,21 @@
+﻿@import "compass/css3";
+
+@import url('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css');
+
+header {
+    margin-bottom: 10px;
+    h2{
+    display: inline;
+}
+
+}
+
+.todos {
+    li{
+    list-style: none;}
+
+}
+
+.todo-done {
+    text-decoration: line-through;
+}
